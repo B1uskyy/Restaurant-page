@@ -17,7 +17,8 @@ function homeScreen() {
 }
 
 function menuScreen() {
-    content.innerHTML = menu();
+    content.innerHTML = "";
+    content.appendChild(menu());
 }
 
 function aboutScreen() {

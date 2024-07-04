@@ -1,41 +1,45 @@
 
-const recipes = [
-    {
-        name: "Mango sorbet",
-        desc: "Delicious mango sorbet freshly made",
-        price: "$4.99"
-    }
-]
+
+const createMenuItem = (name, description, price) => {
+
+    const menuItem = document.createElement("li");
 
 
-const createMenuItem = (item) => {
-    const itemName = item.name;
-    const itemDesc = item.desc;
-    const itemPrice = item.price;
+    const itemName = document.createElement('h2');
+    itemName.innerText = name;
+    menuItem.appendChild(itemName);
+
+    //Add price to list item
+    const itemPrice = document.createElement("p")
+    itemPrice.innerText = price
+    menuItem.appendChild(itemPrice);
+
+    //Add description to list item
+    const itemDescription = document.createElement('p');
+    itemDescription.innerText = description;
+    menuItem.appendChild(itemDescription);
 
 
-    const menuItem = document.createElement("div");
-    menuItem.classList.add("menu-item");
+    return menuItem
 
-    const menuHeader = document.createElement("h2");
-    menuHeader.innerText = itemName;
-
-}
-
-const createMenuParent = (arr) => {
-    const parentDiv = document.createElement("div");
-
-    const pushItem = (item) => parentDiv.appendChild(item);
-
-    arr.forEach(Item => {
-        pushItem(createMenuItem(Item))
-    });
+};
 
 
-}
+const menu = () => {
 
+    const div = document.createElement("div");
 
-const menu = (div) => {
+    // Heading for menu
+    const heading = document.createElement("h1");
+    heading.innerText = "Menu"
+    div.appendChild(heading);
+
+    const menuList = document.createElement("ul");
+    menuList.classList.add("menu");
+    menuList.appendChild(createMenuItem("Mango sorbet", "Delicious sorbet freshly made", "$4.99"));
+    div.appendChild(menuList);
+
+    return div;
 
 };
 
