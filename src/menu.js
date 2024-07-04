@@ -1,4 +1,9 @@
 
+const items = [
+    {
+        name:
+    }
+]
 
 const createMenuItem = (name, description, price) => {
 
@@ -36,7 +41,9 @@ const menu = () => {
 
     const menuList = document.createElement("ul");
     menuList.classList.add("menu");
-    menuList.appendChild(createMenuItem("Mango sorbet", "Delicious sorbet freshly made", "$4.99"));
+    menuList.appendChild(createMenuItem("Mango Madness Smoothie", "Dive into a tropical paradise with our Mango Madness Smoothie. Made with fresh mangoes, a hint of pineapple, a splash of coconut milk, and a dash of honey, this smoothie is perfect for a refreshing treat anytime.", "$6.50"));
+    menuList.appendChild(createMenuItem("Spicy Mango Salsa", "Add a zesty kick to your snack time with our Spicy Mango Salsa. This vibrant mix of ripe mangoes, jalapeños, red onions, cilantro, and lime juice is perfect for dipping chips or topping your favorite dishes.", "$64.99"));
+    menuList.appendChild(createMenuItem("Mango Avocado Salad", "Enjoy a healthy and delicious meal with our Mango Avocado Salad. This refreshing salad combines juicy mangoes, creamy avocados, mixed greens, cherry tomatoes, and red onion, all tossed in a tangy lime vinaigrette.", "$8.99"));
     div.appendChild(menuList);
 
     return div;
