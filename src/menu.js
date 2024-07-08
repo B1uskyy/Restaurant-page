@@ -25,6 +25,7 @@ const menuItems = [
 const createMenuItem = (item) => {
 
     const menuItem = document.createElement("li");
+    menuItem.classList.add("menu-item")
 
 
     const itemName = document.createElement('h2');
@@ -41,7 +42,6 @@ const createMenuItem = (item) => {
     itemDescription.innerText = item.description;
     menuItem.appendChild(itemDescription);
 
-
     return menuItem
 
 };
@@ -50,6 +50,7 @@ const createMenuItem = (item) => {
 const menu = () => {
 
     const div = document.createElement("div");
+    div.classList.add("menu-parent-div")
 
     // Heading for menu
     const heading = document.createElement("h1");
@@ -57,10 +58,11 @@ const menu = () => {
     div.appendChild(heading);
 
     const menuList = document.createElement("ul");
-    menuList.classList.add("menu");
+    menuList.classList.add("menu-list");
     menuItems.forEach(
         item =>
             menuList.appendChild(createMenuItem(item))
+
     );
     //menuList.appendChild(createMenuItem("Mango Madness Smoothie", "Dive into a tropical paradise with our Mango Madness Smoothie. Made with fresh mangoes, a hint of pineapple, a splash of coconut milk, and a dash of honey, this smoothie is perfect for a refreshing treat anytime.", "$6.50"));
     div.appendChild(menuList);

@@ -1,3 +1,14 @@
+:root {
+    --main-bg: #F5EEFE;
+    --primary: #8818EA;
+    --secondary: #F3D779;
+    --accent: #9BF056;
+}
+
+body {
+    background-color: var(--main-bg);
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -13,6 +24,33 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    background-color: var(--primary);
     gap: 25px;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+}
+
+.menu-parent-div {
+    background-color: red;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-list {
+    background-color: var(--primary);
+    margin: 10px;
+}
+
+.menu-item {
+    margin: 10px;
+    background-color: var(--secondary);
+    width: 60vw;
 }

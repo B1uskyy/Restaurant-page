@@ -22,7 +22,8 @@ function menuScreen() {
 }
 
 function aboutScreen() {
-    content.innerHTML = about();
+    content.innerHTML = "";
+    content.appendChild(about());
 }
 
 menuButton.addEventListener("click", menuScreen);
